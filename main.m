@@ -1,25 +1,9 @@
-source('functions.m')
 source('data.m')
+source('meshless.m')
 source('draw.m')
 
-
-ponto = [3 4];
-raio = getRadius(dados,ponto,6);
-
-u(dados,base,[1 2])
-
-hold on;
-scatter(dados(:,1),dados(:,2),'b');
-scatter(ponto(1),ponto(2),'r');
-drawCircle(ponto(1),ponto(2),raio)
-hold off;
-pause();
-
-
-
-tx = ty = linspace (0, 5, 6)';
+tx = ty = linspace (0, 5, 5)';
 [xx, yy] = meshgrid (tx, ty);
-
 tz=[];
 for x=tx'
 	row = [];
@@ -30,7 +14,7 @@ for x=tx'
 	tz = [tz ; row];
 end
 
-tz
+hold on;
 scatter3(dados(:,1),dados(:,2),dados(:,3));
 mesh (tx, ty, tz);
 pause();

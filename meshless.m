@@ -70,7 +70,7 @@ function u = u(data,base,point)
 			c = coefficients(data,P,point,r);
 			p = createBase(base,point);
 		catch
-			m++
+			m++;
 			continue;
 		end
 		break;
