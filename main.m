@@ -1,5 +1,6 @@
 source('functions.m')
 source('data.m')
+source('draw.m')
 
 
 ponto = [3 4];
