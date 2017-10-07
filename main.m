@@ -1,13 +1,14 @@
 source('data.m')
 source('meshless.m')
 source('draw.m')
+graphics_toolkit("gnuplot")
 
-tx = ty = linspace (0, 5, 5)';
+tx = ty = linspace (0, 16, 16)';
 [xx, yy] = meshgrid (tx, ty);
 tz=[];
-for x=tx'
+for y=ty'
 	row = [];
-	for y=ty'
+	for x=tx'
 		z = u(dados,base,[x y]);
 		row = [row z];
 	end
