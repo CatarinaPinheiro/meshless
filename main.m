@@ -15,6 +15,12 @@ for y=ty'
 	tz = [tz ; row];
 end
 
+for point=dados'
+  point
+  calc = [point(1:2) u(dados,base,point(1:2))]
+  dif = (calc - point)(3) 
+end
+
 hold on;
 scatter3(dados(:,1),dados(:,2),dados(:,3));
 mesh (tx, ty, tz);
